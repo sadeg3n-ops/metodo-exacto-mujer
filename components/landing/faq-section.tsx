@@ -32,6 +32,10 @@ const faqs = [
   {
     question: "¿Cuándo se suelen notar cambios?",
     answer: "Las primeras señales suelen verse pronto en rendimiento, recuperación y sensaciones. Los cambios medibles se revisan mes a mes según tu punto de partida y tu adherencia."
+  },
+  {
+    question: "¿Y si hay semanas del mes en las que me noto con menos energía o rindo peor?",
+    answer: "Sí, lo tenemos en cuenta. El plan no se aplica de forma rígida: ajustamos carga, volumen y pautas cuando cambian tu energía, tu recuperación o tus sensaciones, para que puedas seguir progresando sin forzar de más."
   }
 ]
 
@@ -75,20 +79,6 @@ export function FaqSection() {
       <div className="container mx-auto px-4 mt-16 md:mt-20 flex flex-col items-center">
         <div className="max-w-xl w-full text-center bg-card border border-border rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-br from-[#25D366]/10 to-transparent pointer-events-none" />
-
-          <Reveal>
-            <h3 className="text-xl font-bold text-foreground mb-2">
-              ¿Y si hay semanas del mes en las que me noto con menos energía o rindo peor?
-            </h3>
-          </Reveal>
-
-          <Reveal delay={0.05}>
-            <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              Sí, lo tenemos en cuenta. El plan no se aplica de forma rígida: ajustamos carga, volumen y pautas cuando cambian tu energía, tu recuperación o tus sensaciones, para que puedas seguir progresando sin forzar de más.
-            </p>
-          </Reveal>
-
-          <div className="h-px w-full bg-border/70 mb-6" />
 
           <Reveal>
             <h3 className="text-xl font-bold text-foreground mb-2">
