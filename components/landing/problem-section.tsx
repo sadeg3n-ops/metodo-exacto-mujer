@@ -8,7 +8,7 @@ const problems = [
   {
     icon: TrendingDown,
     title: "Rutina sin dirección",
-    description: "Entrenas, pero no sabes qué variable tocar cuando dejas de progresar o empiezas a acumular fatiga."
+    description: "Entrenas, pero no sabes qué variable tocar cuando dejas de progresar o empiezas a acumular más fatiga."
   },
   {
     icon: Users,
@@ -43,14 +43,14 @@ export function ProblemSection() {
           {problems.map((problem, index) => (
             <Reveal key={index} delay={index * 0.15}>
               <Card className="bg-card border-border hover:border-primary/40 transition-all duration-300 hover:shadow-[0_24px_50px_-28px_rgba(111,49,78,0.38)] group h-full">
-                <CardContent className="p-6 md:p-8 flex flex-col items-center text-center">
+                <CardContent className="p-6 md:p-8 flex h-full flex-col items-center text-center">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                     <problem.icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="mb-3 flex min-h-[4rem] items-center justify-center text-xl font-semibold text-foreground md:min-h-[4.5rem]">
                     {problem.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="max-w-[27ch] text-balance text-muted-foreground leading-relaxed">
                     {problem.description}
                   </p>
                 </CardContent>
