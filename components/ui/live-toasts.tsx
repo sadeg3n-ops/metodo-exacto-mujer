@@ -6,9 +6,9 @@ import { Bell } from "lucide-react"
 
 const TOASTS = [
   { name: "Elena", action: "acaba de reservar su valoración", time: "hace 2 min" },
-  { name: "David", action: "completó su check-in semanal", time: "hace 18 min" },
+  { name: "Claudia", action: "completó su check-in semanal", time: "hace 18 min" },
   { name: "María", action: "recibió su ajuste de nutrición", time: "hace 1 hora" },
-  { name: "Javier", action: "empezó su semana 1", time: "hace 7 min" }
+  { name: "Lucía", action: "empezó su semana 1", time: "hace 7 min" }
 ]
 
 export function LiveToasts() {

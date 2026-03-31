@@ -1,6 +1,8 @@
 "use client"
 
+import { useRef } from "react"
 import { ChevronDown } from "lucide-react"
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/ui/reveal"
 import { Tilt } from "@/components/ui/tilt"
@@ -29,6 +31,82 @@ const features = [
   }
 ]
 
+function SolutionFeatureCard({
+  feature,
+  index,
+}: {
+  feature: (typeof features)[number]
+  index: number
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const shouldReduceMotion = useReducedMotion()
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 88%", "center 46%"],
+  })
+
+  const mobileImageShade = useTransform(scrollYProgress, [0, 0.35, 0.8], [0.02, 0.14, 0.3])
+  const mobileDescriptionOpacity = useTransform(scrollYProgress, [0.18, 0.45, 0.82], [0, 0.45, 1])
+  const mobileDescriptionY = useTransform(scrollYProgress, [0.18, 0.82], [16, 0])
+
+  return (
+    <Reveal
+      delay={0.3 + index * 0.15}
+      className={index === 0 ? "lg:col-span-2 lg:row-span-2" : ""}
+    >
+      <div ref={ref} className="h-full">
+        <Tilt className="h-full">
+          <Card className="group relative h-full min-h-[23rem] overflow-hidden border-border/70 bg-card/30 transition-all duration-500 hover:border-primary/60 hover:shadow-2xl hover:shadow-primary/10 md:min-h-0">
+            <div
+              className="absolute inset-0 scale-100 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+              style={{
+                backgroundImage: `url('${feature.image}')`,
+                backgroundPosition: feature.imagePosition,
+              }}
+            />
+            <div className="absolute inset-0 bg-black/28 transition-colors duration-500 md:bg-black/45 group-hover:bg-black/80" />
+            <motion.div
+              aria-hidden="true"
+              className="absolute inset-0 bg-black md:hidden"
+              style={{
+                opacity: shouldReduceMotion ? 0.22 : mobileImageShade,
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/26 to-black/6 transition-all duration-500 md:from-black/90 md:via-black/45 md:to-black/20 group-hover:md:from-black/95 group-hover:md:via-black/80 group-hover:md:to-black/55" />
+
+            <CardContent className={`relative z-10 flex h-full flex-col justify-end p-6 text-left md:p-8 ${index === 0 ? "md:p-12" : ""}`}>
+              <div className="max-w-xl">
+                <h3 className={`mb-2 font-semibold text-white ${index === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
+                  {feature.title}
+                </h3>
+                <p className={`font-semibold tracking-wide text-primary ${index === 0 ? "text-lg md:text-xl" : "text-base"}`}>
+                  {feature.subtitle}
+                </p>
+                <motion.p
+                  className={`mt-4 text-sm leading-relaxed text-slate-300 md:hidden ${index === 0 ? "max-w-lg" : "max-w-sm"}`}
+                  style={
+                    shouldReduceMotion
+                      ? undefined
+                      : {
+                          opacity: mobileDescriptionOpacity,
+                          y: mobileDescriptionY,
+                        }
+                  }
+                >
+                  {feature.description}
+                </motion.p>
+                <p className={`mt-4 hidden text-sm leading-relaxed text-slate-300 transition-all duration-500 md:block md:text-base md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 ${index === 0 ? "max-w-lg" : "max-w-sm"}`}>
+                  {feature.description}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </Tilt>
+      </div>
+    </Reveal>
+  )
+}
+
 export function SolutionSection() {
   return (
     <section id="resultados" className="pt-16 pb-12 md:py-28 bg-background relative overflow-hidden">
@@ -56,39 +134,7 @@ export function SolutionSection() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 max-w-5xl mx-auto md:auto-rows-fr">
           {features.map((feature, index) => (
-            <Reveal
-              key={feature.title}
-              delay={0.3 + index * 0.15}
-              className={index === 0 ? "lg:col-span-2 lg:row-span-2" : ""}
-            >
-              <Tilt className="h-full">
-                <Card className="group relative h-full overflow-hidden border-border/70 bg-card/30 hover:border-primary/60 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
-                  <div
-                    className="absolute inset-0 scale-100 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    style={{
-                      backgroundImage: `url('${feature.image}')`,
-                      backgroundPosition: feature.imagePosition,
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-black/45 transition-colors duration-500 group-hover:bg-black/80" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/20 transition-all duration-500 group-hover:from-black/95 group-hover:via-black/80 group-hover:to-black/55" />
-
-                  <CardContent className={`relative z-10 flex h-full flex-col justify-end p-6 md:p-8 text-left ${index === 0 ? "md:p-12" : ""}`}>
-                    <div className="max-w-xl">
-                      <h3 className={`font-semibold text-white mb-2 ${index === 0 ? "text-3xl md:text-4xl" : "text-2xl"}`}>
-                        {feature.title}
-                      </h3>
-                      <p className={`text-primary font-semibold tracking-wide ${index === 0 ? "text-lg md:text-xl" : "text-base"}`}>
-                        {feature.subtitle}
-                      </p>
-                      <p className={`mt-4 text-sm md:text-base leading-relaxed text-slate-300 transition-all duration-500 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 ${index === 0 ? "max-w-lg" : "max-w-sm"}`}>
-                        {feature.description}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Tilt>
-            </Reveal>
+            <SolutionFeatureCard key={feature.title} feature={feature} index={index} />
           ))}
         </div>
 
