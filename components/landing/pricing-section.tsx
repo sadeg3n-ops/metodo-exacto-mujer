@@ -12,8 +12,8 @@ interface PricingSectionProps {
 }
 
 const features = [
-  "Plan de entrenamiento ajustado según tu progreso, tu disponibilidad y tu respuesta real a la carga",
-  "Revisión técnica en vídeo para evitar molestias y mejorar resultados",
+  "Programación de entrenamiento ajustada a tu progreso, tu disponibilidad y tu respuesta real a la carga",
+  "Revisión técnica en vídeo para entrenar con más seguridad y mejores resultados",
   "Check-in semanal para hacer cambios cuando toca, no cuando ya vas tarde",
   "Nutrición flexible adaptada a tu contexto y a tu vida social",
   "Soporte en menos de 24 h laborables"
@@ -33,7 +33,7 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Así funciona el plan de 12 semanas
+              Así funciona el acompañamiento de 12 semanas
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -53,7 +53,7 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
 
               <CardHeader className="text-center pt-10 pb-4">
                 <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Plan 12 semanas
+                  Acompañamiento 12 semanas
                 </h3>
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-5xl md:text-6xl font-bold text-primary">149€</span>

@@ -25,7 +25,7 @@ const features = [
   {
     title: "Seguimiento constante",
     subtitle: "Ajustes cuando toca",
-    description: "Revisamos técnica, recuperación, sensaciones y rendimiento para tocar carga, volumen o alimentación en el momento correcto.",
+    description: "Revisamos técnica, recuperación, sensaciones y rendimiento para ajustar carga, volumen o alimentación en el momento correcto.",
     image: "/images/process/seguimiento-constante.jpg",
     imagePosition: "center center",
   }
@@ -122,12 +122,12 @@ export function SolutionSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Qué cambia cuando trabajas con un sistema adaptado a ti
+              Qué cambia cuando trabajas con un sistema pensado para ti
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-lg text-muted-foreground">
-              Diagnóstico, programación y ajustes continuos. Sabes qué hacer, por qué hacerlo y cómo adaptar el plan cuando tu cuerpo no responde igual cada semana.
+              Diagnóstico, programación y ajustes continuos. Sabes qué hacer, por qué hacerlo y qué tocar cuando cambian tu energía, tu agenda o tu respuesta al entrenamiento.
             </p>
           </Reveal>
         </div>

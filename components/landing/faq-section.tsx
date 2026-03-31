@@ -11,7 +11,7 @@ import { Reveal } from "@/components/ui/reveal"
 const faqs = [
   {
     question: "¿Y si tengo poco tiempo?",
-    answer: "Adaptamos el plan al tiempo real que tienes. Y si hay semanas con menos energía o más carga mental, ajustamos para que el progreso siga siendo sostenible."
+    answer: "Precisamente ahí más importante es hacer lo que toca. Adaptamos el plan al tiempo real que tienes y ajustamos si una semana viene más cargada."
   },
   {
     question: "¿Sirve si empiezo desde cero?",
@@ -19,23 +19,23 @@ const faqs = [
   },
   {
     question: "¿Y si ya lo he intentado antes?",
-    answer: "Lo que suele fallar no es la constancia, sino el ajuste del sistema. Revisamos datos, adherencia y respuesta al plan para que evolucione contigo."
+    answer: "Lo que suele fallar no es la constancia, sino el sistema. Revisamos datos, adherencia y respuesta al plan para que evolucione contigo."
   },
   {
     question: "¿Necesito gimnasio?",
-    answer: "No. Puedes trabajar en casa con el material que tengas, aunque te diremos el mínimo que conviene tener para progresar mejor."
+    answer: "No. Puedes entrenar en casa con el material que tengas, aunque te diremos el mínimo que conviene tener para progresar mejor."
   },
   {
     question: "¿Me vais a vender algo en la valoración?",
-    answer: "No. La llamada sirve para entender tu caso, detectar el bloqueo y decirte con honestidad si este sistema tiene sentido para ti."
+    answer: "No. La llamada sirve para entender tu caso, detectar el bloqueo y decirte con honestidad si este servicio tiene sentido para ti."
   },
   {
     question: "¿Cuándo se suelen notar cambios?",
-    answer: "Las primeras señales suelen verse pronto en rendimiento, recuperación y sensaciones. Los cambios medibles se revisan mes a mes según tu punto de partida y tu adherencia."
+    answer: "Las primeras mejoras suelen notarse pronto en sensaciones, rendimiento y control. Los cambios medibles se revisan mes a mes según tu punto de partida y tu adherencia."
   },
   {
     question: "¿Y si hay semanas del mes en las que me noto con menos energía o rindo peor?",
-    answer: "Sí, lo tenemos en cuenta. El plan no se aplica de forma rígida: ajustamos carga, volumen y pautas cuando cambian tu energía, tu recuperación o tus sensaciones, para que puedas seguir progresando sin forzar de más."
+    answer: "Sí, lo tenemos en cuenta. El plan no se aplica de forma rígida: ajustamos carga, volumen y pautas cuando cambian tu energía o tu recuperación para que puedas seguir progresando sin forzar de más."
   }
 ]
 
@@ -88,7 +88,7 @@ export function FaqSection() {
 
           <Reveal delay={0.1}>
             <p className="text-muted-foreground mb-6 text-sm">
-              Escríbenos y te responderemos lo antes posible para ayudarte a entender cuál sería tu mejor siguiente paso.
+              Escríbenos y te responderemos lo antes posible para ayudarte a entender si este es tu mejor siguiente paso.
             </p>
           </Reveal>
 

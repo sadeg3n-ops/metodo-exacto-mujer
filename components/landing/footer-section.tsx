@@ -31,11 +31,11 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-5 md:mb-8 text-balance leading-[1.02]">
               Reserva la valoración y{" "}
-              <span className="text-primary">aclara tu siguiente paso.</span>
+              <span className="text-primary">sal de dudas con criterio</span>
             </h2>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto text-pretty">
-              Vemos tu punto de partida, qué está frenando tu progreso y si tiene sentido trabajar contigo.
+              Vemos tu punto de partida, qué está frenando tu progreso y si este sistema tiene sentido para ti.
             </p>
 
             <Button
@@ -68,7 +68,7 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
                 </span>
               </a>
               <p className="text-muted-foreground/80 text-sm max-w-xs mx-auto md:mx-0">
-                Entrenamiento y nutrición con criterio, seguimiento y ajustes reales para progresar con un sistema sostenible.
+                Entrenamiento y nutrición con criterio, seguimiento real y ajustes continuos para progresar sin vivir a dieta.
               </p>
             </div>
 

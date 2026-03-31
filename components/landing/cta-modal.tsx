@@ -62,7 +62,7 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
                 Reserva tu valoración inicial
               </h2>
               <p className="text-muted-foreground mb-6">
-                Es una llamada breve para ver tu caso, detectar el bloqueo y decirte si puedo ayudarte de forma realista.
+                Es una llamada breve para entender tu caso, detectar el bloqueo y decirte si puedo ayudarte de forma realista.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -109,7 +109,7 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
                   <Label htmlFor="objetivo">Objetivo</Label>
                   <Textarea
                     id="objetivo"
-                    placeholder="Qué buscas, qué te está costando y cuánto tiempo tienes"
+                    placeholder="Qué buscas, qué te está costando y cuánto tiempo real tienes"
                     value={formData.objetivo}
                     onChange={(e) => setFormData({ ...formData, objetivo: e.target.value })}
                     className="bg-secondary border-border min-h-[100px]"

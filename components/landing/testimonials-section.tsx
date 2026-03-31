@@ -10,11 +10,11 @@ const testimonials = [
     name: "Laura M.",
     age: "38 años",
     avatar: "/images/avatar-2.jpg",
-    quote: "Llevaba tiempo entrenando con constancia, pero cada vez me sentía más cansada y no veía cambios. Al ajustar la técnica, la carga y la comida, empecé a progresar sin dolor y con mucha más claridad.",
+    quote: "Llevaba tiempo entrenando con constancia, pero cada vez me sentía más cansada y no veía cambios. Al ordenar el entrenamiento, ajustar la carga y simplificar la comida, empecé a progresar con menos desgaste y mucha más claridad.",
     result: "+3 kg músculo",
     beforeImage: "/images/antes-laura.jpg?v=2",
     afterImage: "/images/despues-laura.jpg?v=2",
-    problem: "Llegó cansada, con molestias y sin notar cambios en su composición corporal."
+    problem: "Llegó cansada, con molestias y haciendo mucho más de lo que necesitaba para progresar."
   }
 ]
 
@@ -30,7 +30,7 @@ export function TestimonialsSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Mujeres normales. Cambios medibles
+              Mujeres normales. Resultados que se pueden medir
             </h2>
           </Reveal>
         </div>

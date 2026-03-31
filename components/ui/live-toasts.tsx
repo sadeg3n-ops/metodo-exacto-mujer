@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Bell } from "lucide-react"
 
 const TOASTS = [
-  { name: "Elena", action: "acaba de reservar su valoración", time: "hace 2 min" },
-  { name: "Claudia", action: "completó su check-in semanal", time: "hace 18 min" },
+  { name: "Elena", action: "reservó su valoración inicial", time: "hace 2 min" },
+  { name: "Claudia", action: "completó su revisión semanal", time: "hace 18 min" },
   { name: "María", action: "recibió su ajuste de nutrición", time: "hace 1 hora" },
   { name: "Lucía", action: "empezó su semana 1", time: "hace 7 min" }
 ]

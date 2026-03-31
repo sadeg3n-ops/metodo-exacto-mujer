@@ -18,11 +18,11 @@ const socialPreviewUrl = new URL("/social-preview-logo-v1.png?v=20260330b", norm
 export const metadata: Metadata = {
   metadataBase: new URL(normalizedSiteUrl),
   title: "Método Exacto | Asesoría Online Premium",
-  description: "Reserva una valoración inicial y descubre qué está frenando tu progreso, qué conviene ajustar y si tiene sentido trabajar contigo.",
+  description: "Detectamos qué está frenando tus resultados, qué conviene ajustar y si este sistema tiene sentido para ti.",
   keywords: "asesoría online, entrenador personal online, entrenamiento online, nutrición flexible, recomposición corporal",
   openGraph: {
     title: "Método Exacto | Asesoría Online Premium",
-    description: "Reserva una valoración inicial y descubre qué está frenando tu progreso, qué conviene ajustar y si tiene sentido trabajar contigo.",
+    description: "Detectamos qué está frenando tus resultados, qué conviene ajustar y si este sistema tiene sentido para ti.",
     siteName: "Método Exacto",
     type: "website",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Método Exacto | Asesoría Online Premium",
-    description: "Reserva una valoración inicial y descubre qué está frenando tu progreso, qué conviene ajustar y si tiene sentido trabajar contigo.",
+    description: "Detectamos qué está frenando tus resultados, qué conviene ajustar y si este sistema tiene sentido para ti.",
     images: [socialPreviewUrl],
   },
   icons: {

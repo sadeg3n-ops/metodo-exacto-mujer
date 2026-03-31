@@ -8,17 +8,17 @@ const problems = [
   {
     icon: TrendingDown,
     title: "Rutina sin dirección",
-    description: "Entrenas, pero no sabes qué variable tocar cuando dejas de progresar o empiezas a acumular más fatiga."
+    description: "Entrenas, pero no sabes qué ajustar cuando te estancas o empiezas a acumular más fatiga de la cuenta."
   },
   {
     icon: Users,
     title: "Dietas difíciles de sostener",
-    description: "Si comer bien implica vivir restringida, controlar todo o renunciar a tu vida social, acabarás soltándolo."
+    description: "Si comer bien implica vivir restringida, controlar todo o renunciar a tu vida social, tarde o temprano lo soltarás."
   },
   {
     icon: AlertCircle,
     title: "Cero personalización",
-    description: "Sin seguimiento ni ajustes cuando baja tu energía o cambia tu rendimiento, es fácil sentir que haces todo bien y no ver resultados."
+    description: "Sin seguimiento ni ajustes cuando tu cuerpo no responde igual, es fácil hacer “todo bien” y seguir en el mismo punto."
   }
 ]
 
@@ -29,12 +29,12 @@ export function ProblemSection() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <Reveal>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Si entrenas, comes razonablemente bien y aun así no cambias, no te falta esfuerzo.
+              Si entrenas, comes razonablemente bien y aun así no notas cambios, no suele faltar esfuerzo.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-lg text-muted-foreground">
-              El bloqueo rara vez es la actitud. Suele ser un sistema mal ajustado.
+              Suele faltar un sistema que tenga en cuenta tu contexto, tu energía y tu respuesta real al plan.
             </p>
           </Reveal>
         </div>
