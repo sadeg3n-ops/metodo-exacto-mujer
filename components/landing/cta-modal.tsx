@@ -118,6 +118,7 @@ export function CtaModal({ isOpen, onClose }: CtaModalProps) {
 
                 <Button
                   type="submit"
+                  sheen
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6"
                 >
                   Solicitar valoración

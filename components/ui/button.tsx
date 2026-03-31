@@ -41,17 +41,19 @@ function Button({
   variant,
   size,
   asChild = false,
+  sheen = false,
   ...props
 }: React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    sheen?: boolean
   }) {
   const Comp = asChild ? Slot : 'button'
 
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size }), sheen && 'button-sheen', className)}
       {...props}
     />
   )

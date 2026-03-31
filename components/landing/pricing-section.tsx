@@ -79,6 +79,7 @@ export function PricingSection({ onCtaClick }: PricingSectionProps) {
                 <MagneticButton className="w-full max-w-sm">
                   <Button
                     onClick={onCtaClick}
+                    sheen
                     size="lg"
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-7 rounded-xl group transition-all hover:scale-[1.02] shadow-xl shadow-primary/20"
                   >

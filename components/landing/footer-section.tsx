@@ -40,6 +40,7 @@ export function FooterSection({ onCtaClick }: FooterSectionProps) {
 
             <Button
               onClick={onCtaClick}
+              sheen
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg md:text-xl px-10 md:px-12 py-7 md:py-8 rounded-2xl group transition-all hover:scale-105 shadow-[0_18px_60px_rgba(200,92,122,0.26)]"
             >
