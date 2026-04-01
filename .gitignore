@@ -20,6 +20,7 @@ node_modules
 .env
 .env.*
 !.env.example
+backup-export*/
 backup-export/generated/
 backup-export/*.zip
 backup-export/*.tar.gz
